@@ -1,0 +1,36 @@
+.logoin_pang{
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999;
+    .logoin_box{
+        width: 335px;
+        height: 403px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    }
+    .logoin_pang_inside{
+        flex-direction: column;
+    }
+}
+.modal-content{
+    height: 500px;
+    .modal-title{
+        img{
+            margin-left: 42%;
+        }
+    }
+    .modal-footer{
+        padding: 0px;
+        border: none;
+        display: flex;
+        flex-direction: column;
+    }
+}

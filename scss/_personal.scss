@@ -1,0 +1,10 @@
+.personal_information{
+    margin-top: 150px;
+    .personal_photo{
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        width: 300px;
+    }
+}

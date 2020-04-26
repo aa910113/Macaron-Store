@@ -1,0 +1,27 @@
+$falcon: #735b69;
+
+.navbar a{
+    width: 5%;
+    .logo{
+        width: 100%;
+    }
+}
+.fa-shopping-cart,
+.fa-user-circle-o{
+    width: 20px;
+    height: 20px;
+}
+.botton_logo{
+    width: 100%;
+}
+
+footer{
+    background-color: $falcon;
+    height: 150px;
+}
+.product_list{
+    .card{
+        width: 348px;
+        margin: 0px 10px;
+    }
+}
