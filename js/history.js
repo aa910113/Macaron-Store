@@ -1,7 +1,7 @@
 //顯示會員帳號和nav bar功能
 (()=>{
     let member = JSON.parse(localStorage.getItem('user'));
-    let memberAcc = document.querySelector(".member_acc");
+  let memberAcc = document.querySelector(".f-member_btn");
     let navBar = document.getElementById("navbarToggleExternalContent");
     let str = "";
     let navStr = "";
@@ -10,7 +10,7 @@
     }else if(member !== null){
       str += `<a class="mr-2" href="shopping cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
       <div class="dropdown">
-      <a class="btn btn-secondary dropdown-toggle w-100 ml-3" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="btn btn-secondary dropdown-toggle w-100 ml-3 user-acc" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       ${member.email}
       </a>
     
@@ -19,17 +19,17 @@
       </div>
     </div>`
       navStr +=`
-      <div class="bg-dark p-1">
-        <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block">首頁</a>
+      <div class="p-1">
+        <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">首頁</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block">購物車</a>
+      <div class="p-1">
+        <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">購物車</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="personal.html" role="button" class="btn btn-secondary btn-lg btn-block">個人訊息</a>
+      <div class="p-1">
+        <a href="personal.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">個人訊息</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="history.html" role="button" class="btn btn-secondary btn-lg btn-block">歷史紀錄</a>
+      <div class="p-1">
+        <a href="history.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">歷史紀錄</a>
       </div>`
     }
     memberAcc.innerHTML = str;
@@ -49,16 +49,16 @@ fetch("http://localhost:3000/orders", requestOptions)
     .then(jsonData =>{
       let data = jsonData;
         history(data)
-        // signOut(data)
+        signOut(data)
     })
     .catch(error => console.log('error', error));
 //會員登出
-// function signOut(data){
-//   let out = document.querySelector(".dropdown-item").addEventListener("click",()=>{
-//     localStorage.removeItem("user");
-//     window.location.reload("index.html");
-//   })
-// }
+function signOut(data){
+  let out = document.querySelector(".dropdown-item").addEventListener("click",()=>{
+    localStorage.removeItem("user");
+    window.location.reload("index.html");
+  })
+}
 //渲染購買歷史
 function history(data){
   fetch("http://localhost:3000/products", requestOptions)
@@ -72,7 +72,7 @@ function history(data){
           let itemStr = "";
           let date = data[i].ordertime
           let total = data[i].purchase
-          console.log(total)
+          // console.log(total)
           let year = new Date(date).getFullYear()
           let xx = new Date(date).toString()
           let commid = data[i].id
@@ -100,17 +100,19 @@ function history(data){
           }
           str += `
           <div class="col-md-6">
-            <ul class="black_dot col-md-12 border border-dark w-100 p-0 d-flex justify-content-end btn btn-outline-dark" 
+            <ul class="black_dot col-md-12 w-100 p-0 d-flex justify-content-end f-history-record" 
             role="button" data-toggle="collapse" href="#multiCollapseExample${i}" role="button" aria-expanded="false" aria-controls="multiCollapseExample${i}">
               <li class="col-md-4 justify-content-content mt-3 mb-3">
                 <span class="row h5">${year}</br>${weekDay}</span>
                 <span class="row h6">時間 ${time}</span>
               </li>
               <li class="col-md-4 align-self-center h3 total_price">$${n}</li>
-              <li class="col-md-3 p-0 d-flex align-self-center justify-content-end"><button type="button" class="btn btn-link order" data-id="${commid}">重下訂單</button></li>
+              <li class="col-md-3 p-0 d-flex align-self-center justify-content-end">
+                <button type="button" class="btn btn-link order" data-id="${commid}">重下訂單</button>
+              </li>
             </ul>
             <div class="collapse multi-collapse" id="multiCollapseExample${i}">
-              <ul class="card card-body">${itemStr}</ul>
+              <ul class="card card-body record-content">${itemStr}</ul>
             </div>
           </div>`
         }

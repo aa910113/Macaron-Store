@@ -9,57 +9,77 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 </head>
-<body class="hisb">
-  <header>
-    <div class="pos-f-t">
-      <div class="collapse" id="navbarToggleExternalContent">
-        <!-- <div class="bg-dark p-1">
-          <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block">首頁</a>
+<body class="pb-5">
+  <div class="header">
+    <div class="container-fluid">
+      <div
+        class="collapse"
+        id="navbarToggleExternalContent"
+      ></div>
+      <nav class="navbar navbar-dark  justify-content-end px-4 mx-4">
+        <a
+          class="col-1"
+          href="index.html"
+        >
+          <img
+            class="logo"
+            src="img/small slogo.png"
+            alt="..."
+          ></a>
+        <div class="col-8 d-flex justify-content-center pr-5 mr-3 ml-auto">
+          <button
+            class="navbar-toggler rounded-circle f-menu-btn"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-stream"></i>
+          </button>
         </div>
-        <div class="bg-dark p-1">
-          <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block">購物車</a>
-        </div>
-        <div class="bg-dark p-1">
-          <a href="personal.html" role="button" class="btn btn-secondary btn-lg btn-block">個人訊息</a>
-        </div>
-        <div class="bg-dark p-1">
-          <a href="history.html" role="button" class="btn btn-secondary btn-lg btn-block">歷史紀錄</a>
-        </div> -->
-      </div>
-      <nav class="navbar navbar-dark bg-dark d-flex justify-content-around">
-        <a href="index.html"><img class="logo" src="photo/logo.png" alt="..."></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class=" member_acc row d-flex align-items-center">
-          <a class="mr-2" href="shopping cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-circle"></i></button>
+        <div class="row d-flex align-items-center justify-content-around col-2 f-member_btn">
+          <a href="shopping cart.html"><i
+              class="fa fa-shopping-cart"
+              aria-hidden="true"
+            ></i></a>
+          <button
+            type="button"
+            class="btn btn-link "
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+          ><i class="fas fa-user-circle"></i></button>
         </div>
       </nav>
     </div>
-  </header>
-  <div class="hiscon container d-flex flex-wrap pt-5"></div>
-  <footer class="hisf d-flex align-items-center py-3">
-    <div class="row justify-content-around align-items-center m-auto">
-      <div class="col-2">
-        <img src="/photo/text logo.png" alt="" class="botton_logo">
-      </div>
-      <div class="col-2">
-        One of two columns
-      </div>
-      <div class="col-2 d-flex justify-content-around">
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-        <a href="http://instagram.com/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
-        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="hiscon container d-flex flex-wrap pt-5 mb-5"></div>
+  <div class="footer" class="pt-2 hisf">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <img
+          src="/img/text logo.png"
+          alt=""
+          class="botton_logo"
+        >
+        <p class="m-0">
+          僅用來做為作品使用。
+        </p>
+        <div class="d-flex justify-content-around f-footer-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="http://instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+        </div>
       </div>
     </div>
-  </footer>
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  </div>
+  <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header border-0">
-          <div class="modal-title" id="exampleModalCenterTitle"><img class="w-25" src="/photo/logo.png" alt=""></div>
+          <div class="modal-title" id="exampleModalCenterTitle"><img class="w-25" src="/img/logo.png" alt=""></div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -90,7 +110,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <img class="w-25 m-auto" src="/photo/text logo.png" alt="">
+        <img class="w-25 m-auto" src="/img/text logo.png" alt="">
         <div class="modal-body d-flex">
           <div class="registered col-md-6">
             <form>
@@ -137,7 +157,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+  <div class="f-bg-left"></div>
+  <div class="f-bg-right"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

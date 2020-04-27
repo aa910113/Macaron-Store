@@ -1,30 +1,30 @@
 //顯示會員帳號和nav bar功能
 (()=>{
   let member = JSON.parse(localStorage.getItem('user'));
-  let memberAcc = document.querySelector(".member_acc");
+  let memberAcc = document.querySelector(".f-member_btn");
   let navBar = document.getElementById("navbarToggleExternalContent");
   let str = "";
   let navStr = "";
   if(member === null){
     str += `<a class="mr-2" href="shopping cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-circle">登入</i></button>`
+    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-circle"></i></button>`
     navStr += `
-    <div class="bg-dark p-1">
-      <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block">首頁</a>
+    <div class="p-1">
+      <a href="index.html" role="button" class="btn btn-lg btn-block f-collapse-link">首頁</a>
     </div>
-    <div class="bg-dark p-1">
-      <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block">購物車</a>
+    <div class="p-1">
+      <a href="shopping cart.html" role="button" class="btn btn-lg btn-block f-collapse-link">購物車</a>
     </div>
-    <div class="bg-dark p-1">
-      <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-secondary btn-lg btn-block">個人訊息</a>
+    <div class="p-1">
+      <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-lg btn-block f-collapse-link">個人訊息</a>
     </div>
-    <div class="bg-dark p-1">
-      <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-secondary btn-lg btn-block">歷史紀錄</a>
+    <div class="p-1">
+      <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-lg btn-block f-collapse-link">歷史紀錄</a>
     </div>`
   }else if(member !== null){
     str += `<a class="mr-2" href="shopping cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
     <div class="dropdown">
-      <a class="btn btn-secondary dropdown-toggle w-100 ml-3" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="btn btn-secondary dropdown-toggle w-100 ml-3 user-acc" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       ${member.email}
       </a>
     
@@ -33,17 +33,17 @@
       </div>
     </div>`
     navStr +=`
-    <div class="bg-dark p-1">
-      <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block">首頁</a>
+    <div class="p-1">
+      <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">首頁</a>
     </div>
-    <div class="bg-dark p-1">
-      <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block">購物車</a>
+    <div class="p-1">
+      <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">購物車</a>
     </div>
-    <div class="bg-dark p-1">
-      <a href="personal.html" role="button" class="btn btn-secondary btn-lg btn-block">個人訊息</a>
+    <div class="p-1">
+      <a href="personal.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">個人訊息</a>
     </div>
-    <div class="bg-dark p-1">
-      <a href="history.html" role="button" class="btn btn-secondary btn-lg btn-block">歷史紀錄</a>
+    <div class="p-1">
+      <a href="history.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">歷史紀錄</a>
     </div>`
   }
   memberAcc.innerHTML = str;
@@ -64,7 +64,7 @@ fetch("http://localhost:3000/members", requestOptions)
   .catch(error => console.log('error', error));
 //登入判斷
 function logoin(jsonData){
-  let logoinBtn = document.querySelector(".logoin").addEventListener("click",()=>{
+  let logoinBtn = document.querySelector(".log-btn").addEventListener("click",()=>{
     let  userEmail = document.getElementById("exampleInputEmail1").value;
     let  userPwd = document.getElementById("exampleInputPassword1").value;
     let filterUser = [];
@@ -181,7 +181,6 @@ function registered(jsonData){
 function signOut(jsonData){
   let out = document.querySelector(".dropdown-item").addEventListener("click",()=>{
     localStorage.removeItem("user");
-    console.log("66666")
     window.location.reload("shopping cart.html");
   })
 }
@@ -196,7 +195,7 @@ function xx(){
     <th scope="row">1</th>
     <td>無商品</td>
     <td>$0</td>
-    <td><input type="number" name="quantity"></td>
+    <td><input class="f-quantity" type="number" name="quantity"></td>
     <td>$0</td>
     <td><button type="button" class="btn btn-link"></button></td>
   </tr>`
@@ -218,9 +217,9 @@ function xx(){
                 <th scope="row"><img src="${x.url[0].img}" alt="" style="width: 5rem;"></th>
                 <td>${x.name}</td>
                 <td>$${element.amount}</td>
-                <td><input type="number" name="quantity" value="${element.num}"></td>
+                <td><input class="f-quantity" type="number" name="quantity" value="${element.num}"></td>
                 <td>$${element.amount*parseFloat(element.num)}</td>
-                <td><button type="button" class="btn btn-link"><i class="far fa-trash-alt" data-id="${element.productid}"></i></button></td>
+                <td><button type="button" class="btn btn-link f-deLbtn"><i class="far fa-trash-alt" data-id="${element.productid}"></i></button></td>
               </tr>`
             }
           });

@@ -1,7 +1,7 @@
 //顯示會員帳號和nav bar功能
 (()=>{
     let member = JSON.parse(localStorage.getItem('user'));
-    let memberAcc = document.querySelector(".member_acc");
+  let memberAcc = document.querySelector(".f-member_btn");
     let navBar = document.getElementById("navbarToggleExternalContent");
     let str = "";
     let navStr = "";
@@ -9,22 +9,22 @@
       str += `<a class="mr-2" href="shopping cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
       <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-user-circle">登入</i></button>`
       navStr += `
-      <div class="bg-dark p-1">
-        <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block">首頁</a>
+      <div class="p-1">
+        <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">首頁</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block">購物車</a>
+      <div class="p-1">
+        <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">購物車</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-secondary btn-lg btn-block">個人訊息</a>
+      <div class="p-1">
+        <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">個人訊息</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-secondary btn-lg btn-block">歷史紀錄</a>
+      <div class="p-1">
+        <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">歷史紀錄</a>
       </div>`
     }else if(member !== null){
       str += `<a class="mr-2" href="shopping cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
       <div class="dropdown">
-      <a class="btn btn-secondary dropdown-toggle w-100 ml-3" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="btn btn-secondary dropdown-toggle w-100 ml-3 user-acc" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       ${member.email}
       </a>
     
@@ -33,17 +33,17 @@
       </div>
     </div>`
       navStr +=`
-      <div class="bg-dark p-1">
-        <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block">首頁</a>
+      <div class="p-1">
+        <a href="index.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">首頁</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block">購物車</a>
+      <div class="p-1">
+        <a href="shopping cart.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">購物車</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="personal.html" role="button" class="btn btn-secondary btn-lg btn-block">個人訊息</a>
+      <div class="p-1">
+        <a href="personal.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">個人訊息</a>
       </div>
-      <div class="bg-dark p-1">
-        <a href="history.html" role="button" class="btn btn-secondary btn-lg btn-block">歷史紀錄</a>
+      <div class="p-1">
+        <a href="history.html" role="button" class="btn btn-secondary btn-lg btn-block f-collapse-link">歷史紀錄</a>
       </div>`
     }
     memberAcc.innerHTML = str;
@@ -212,7 +212,7 @@ function comm(jsonData){
         <p>${jsonData[i].introduction}</p>
       </div>
       <div class="col-sm">
-        <span class="d-flex flex-row-reverse">$${jsonData[i].price}</span>
+        <span class="d-flex flex-row-reverse h2">$${jsonData[i].price}</span>
       </div>
       <div class="col-sm">
         <input class="xx" type="number" name="quantity" min="0">

@@ -1,0 +1,37 @@
+.single_page_information{
+    flex-direction: column;
+    color: #735b69;
+}
+.carousel-item{
+    img{
+        height: 820px;
+    }
+}
+.f-commodity-bg{
+    background-color: #FEE19F;
+    ul{
+        list-style: none;
+    }
+}
+.circle,
+.circle1,
+.circle2{
+    position: absolute;
+    height: 900px;
+    width: 900px;
+    border-radius: 50%;
+    top: 5px;
+    z-index: -3;
+}
+.circle{
+    left: -120px;
+    background-color: #B7DDE0;
+}
+.circle2{
+    left: -195px;
+    background-color: #B7DDE0;
+}
+.circle1{
+    left: -155px;
+    background-color: #FEE19F;
+}

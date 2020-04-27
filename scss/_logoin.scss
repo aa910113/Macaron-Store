@@ -34,3 +34,49 @@
         flex-direction: column;
     }
 }
+.login-bg{
+    background-color: #FEE19F !important;
+    overflow: hidden;
+    .show{
+        z-index: 2;
+    }
+}
+.regd-bg{
+    background-color: #B7DDE0 !important;
+}
+.bg-circle{
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    border-radius: 50%;
+    background-color: #B7DDE0;
+    left: -70px;
+    top: -25px;
+}
+.f-log-input{
+    background-color: transparent !important;
+    border: 0 !important; 
+    border-bottom: 2px solid #735b69 !important;
+    border-radius: 0 !important;
+}
+.log-btn{
+    border: 1px solid #735b69 !important;
+    color: #735b69 !important;
+    margin: 0 !important;
+}
+.log-btn:hover{
+    background-color: #735b698f !important;
+    color: #ffffff !important;
+    transition: 1s;
+}
+.regd-btn{
+    color: #735b69 !important;
+    margin: 0 !important;
+}
+.registered_btn{
+    background-color: rgb(253, 230, 175) !important;
+    border: 0 !important;
+}
+.registered_btn:hover{
+    background-color: #FEE19F !important;
+}

@@ -4,6 +4,63 @@
           justify-content: flex-end;
 }
 
+.f-bg-left-shopping,
+.f-bg-right-shopping,
+.f-bg-circle-shopping {
+  position: absolute;
+  z-index: -2;
+}
+
+.f-bg-left-shopping,
+.f-bg-right-shopping {
+  height: 100%;
+}
+
+.f-bg-left-shopping {
+  width: 20%;
+  background-color: #FEE19F;
+}
+
+.f-bg-right-shopping {
+  width: 80%;
+  right: 0;
+  background-color: #B7DDE0;
+}
+
+.f-bg-circle-shopping {
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background-color: #FEE19F;
+  right: -250px;
+  bottom: -200px;
+}
+
+.f-quantity {
+  width: 50px;
+  background-color: transparent !important;
+  border: 1px solid #735b69;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.f-deLbtn {
+  color: #735b69 !important;
+}
+
+.f-order-btn {
+  color: #735b69 !important;
+  border: 1px solid #735b69 !important;
+  background-color: #735b693a !important;
+}
+
+.f-order-btn:hover {
+  color: #fff !important;
+  background-color: #735b69 !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .personal_information {
   margin-top: 150px;
 }
@@ -20,6 +77,23 @@
 
 .personal_information img {
   width: 300px;
+}
+
+.f-personal-bg {
+  background-color: #B7DDE0;
+}
+
+.upd_btn {
+  border-color: #735b69 !important;
+  color: #735b69 !important;
+  background-color: rgba(255, 208, 214, 0.397) !important;
+}
+
+.upd_btn:hover {
+  color: #ffffff !important;
+  background-color: #FFD0D6 !important;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .logoin_pang {
@@ -70,32 +144,182 @@
           flex-direction: column;
 }
 
-.navbar a {
-  width: 5%;
+.login-bg {
+  background-color: #FEE19F !important;
+  overflow: hidden;
 }
 
-.navbar a .logo {
-  width: 100%;
+.login-bg .show {
+  z-index: 2;
 }
 
-.fa-shopping-cart,
-.fa-user-circle-o {
-  width: 20px;
-  height: 20px;
+.regd-bg {
+  background-color: #B7DDE0 !important;
+}
+
+.bg-circle {
+  position: absolute;
+  height: 110%;
+  width: 110%;
+  border-radius: 50%;
+  background-color: #B7DDE0;
+  left: -70px;
+  top: -25px;
+}
+
+.f-log-input {
+  background-color: transparent !important;
+  border: 0 !important;
+  border-bottom: 2px solid #735b69 !important;
+  border-radius: 0 !important;
+}
+
+.log-btn {
+  border: 1px solid #735b69 !important;
+  color: #735b69 !important;
+  margin: 0 !important;
+}
+
+.log-btn:hover {
+  background-color: #735b698f !important;
+  color: #ffffff !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.regd-btn {
+  color: #735b69 !important;
+  margin: 0 !important;
+}
+
+.registered_btn {
+  background-color: #fde6af !important;
+  border: 0 !important;
+}
+
+.registered_btn:hover {
+  background-color: #FEE19F !important;
+}
+
+body {
+  position: relative;
+}
+
+.f-bg-left,
+.f-bg-right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0px;
+  z-index: -2;
+}
+
+.f-bg-left {
+  background-color: #FEE19F;
+}
+
+.f-bg-right {
+  right: 0px;
+  background-color: #B7DDE0;
+}
+
+.header {
+  background-color: transparent;
+}
+
+.f-collapse-link {
+  color: #735b69 !important;
+  background-color: rgba(255, 208, 214, 0.397) !important;
+  border: 0 !important;
+}
+
+.f-collapse-link:hover {
+  color: #ffffff !important;
+  background-color: #FFD0D6 !important;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.logo {
+  width: 50%;
+}
+
+.f-menu-btn {
+  width: 55px;
+  height: 55px;
+  border-color: #ffa8b4 !important;
+  color: #ffa8b4 !important;
+}
+
+.f-member_btn {
+  font-size: 1.5rem;
+}
+
+.f-member_btn a {
+  color: #ffa8b4 !important;
+}
+
+.f-member_btn button {
+  color: #ffa8b4 !important;
+  font-size: 1.5rem !important;
+  padding: 0;
+  height: 100%;
+}
+
+.f-member_btn a:hover,
+.f-member_btn button:hover {
+  color: #fd909e !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.f-img-center {
+  height: 348px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+}
+
+.f-card-border {
+  border: 0 !important;
+  color: #735b69;
+  background-color: rgba(253, 197, 204, 0.432) !important;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.f-card-border:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .botton_logo {
-  width: 100%;
+  width: 100px;
 }
 
-footer {
+.user-acc {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+.footer {
   background-color: #735b69;
-  height: 150px;
+  color: #735b69;
+  height: 50px;
 }
 
-.product_list .card {
-  width: 348px;
-  margin: 0px 10px;
+.footer .f-footer-icons {
+  width: 120px;
+}
+
+.footer .f-footer-icons a {
+  color: #B7DDE0  !important;
 }
 
 .black_dot {
@@ -106,6 +330,7 @@ footer {
   position: relative;
   min-height: 100vh;
   padding-bottom: 180px;
+  overflow: hidden;
 }
 
 .hisf {
@@ -113,6 +338,76 @@ footer {
   bottom: 0px;
   left: 0px;
   right: 0px;
-  height: 150px;
+  height: 50px;
+}
+
+.f-history-record {
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.315);
+  border-radius: 15px;
+  color: #735b69;
+}
+
+.f-history-record:hover {
+  background-color: rgba(255, 255, 255, 0.664);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.order {
+  color: #735b69 !important;
+}
+
+.record-content {
+  border: 0 !important;
+  background-color: rgba(255, 255, 255, 0.315) !important;
+  border-radius: 15px !important;
+  color: #735b69;
+}
+
+.single_page_information {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #735b69;
+}
+
+.carousel-item img {
+  height: 820px;
+}
+
+.f-commodity-bg {
+  background-color: #FEE19F;
+}
+
+.f-commodity-bg ul {
+  list-style: none;
+}
+
+.circle,
+.circle1,
+.circle2 {
+  position: absolute;
+  height: 900px;
+  width: 900px;
+  border-radius: 50%;
+  top: 5px;
+  z-index: -3;
+}
+
+.circle {
+  left: -120px;
+  background-color: #B7DDE0;
+}
+
+.circle2 {
+  left: -195px;
+  background-color: #B7DDE0;
+}
+
+.circle1 {
+  left: -155px;
+  background-color: #FEE19F;
 }
 /*# sourceMappingURL=all.css.map */
