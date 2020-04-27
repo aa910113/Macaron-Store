@@ -1,0 +1,111 @@
+
+/* 自訂 背景顏色 */
+.b-bg-pastel-pink{
+    background-color: #ffd0d6;
+}
+.b-bg-ziggurat{
+    background-color: #b7dde0;
+}
+.b-bg-lemonade{
+    background-color: #fee19f;
+}
+.b-bg-falcon{
+    background-color: #735b69;
+}
+
+.b-bg-symphony{
+	margin: 0px;
+    padding: 0px;
+    background-image: url(../img/symphony.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+/* 自訂 文字 顏色 */
+.b-text-pastel-pink{
+    color: #ffd0d6;
+}
+
+.b-text-ziggurat{
+    color: #b7dde0;
+}
+
+.b-text-lemonade{
+    color: #fee19f;
+}
+
+.b-text-falcon{
+    color: #735b69;
+}
+
+/* 自訂 框線 顏色 */
+.b-border-ziggurat{
+    border: 3px solid #b7dde0;
+}
+
+.b-border-lemonade{
+    border: 3px solid #fee19f;
+}
+
+.b-border-falcon{
+    border: 3px solid #735b69;
+}
+
+
+/*  dashboard_table 最小高度不會低於計算值 高度100%-navbar高度-footer高度-footer的mt-footer的文字大小 */
+.b-main {
+    min-height: calc(100vh- (49px + 49px + 42px + 14px))
+}
+
+/* 連結 */
+#b-nav .navbar-nav li > a {
+	color: rgba(115,91,105, 0.3);
+	transition: color .2s;
+	
+	&:hover,
+	&:focus{
+		color: #735b69;
+        padding-bottom: 8px;
+		border-bottom: 3px solid #735b69;
+		
+	}
+}
+
+#b-nav .navbar-nav li.active > a {
+	color: #735b69;
+    padding-bottom: 8px;
+	border-bottom: 3px solid #735b69;
+}
+
+/* 取消卡片背景 */
+.b-card-no-bg {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* 修改分頁樣式 */
+#b-page .page-link {
+    color: #735b69;
+}
+
+/* 大頭貼 */
+.custom-circle-image {
+     /* note i used vw not px for better responsive */
+    width: 20vw;
+    height: 20vw;
+
+    img {
+        object-fit: cover; 
+    }
+}
+
+/* backendPerson dropdown 滾輪 */
+.b-dropdown {
+    overflow-y: auto;
+    height: 300px;
+}
+
+/* footer 至底 */
+.b-footer {
+    min-height: 300px;
+}

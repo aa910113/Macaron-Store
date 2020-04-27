@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改單一商品資料</title>
+    <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+<body class="b-bg-symphony">
+    <!-- 導覽列 -->
+    <div id="b-nav">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="img/text logo.png" width="120px" height="24px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="backendIndex.html">首頁</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="backendMember.html">會員資料</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="backendOrder.html">訂單明細</a>
+                    </li>
+                    <li class="nav-item mx-2 active">
+                        <a class="nav-link" href="backendList.html">產品列表</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- 主要內容 -->
+    <section class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3 b-border-falcon">
+                        <div class="card-header h3">商品圖片編輯</div>
+                        <div class="card-body js-item-url">
+                            <!-- 新增商品 -->
+                            <!-- 新增商品圖片 -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="item-add-url" placeholder="請輸入商品圖片的網址">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-info js-btn-add" type="button"><i class="fas fa-plus"> 新增圖片</i></button>
+                                </div>
+                            </div>
+                            <!-- 刪除商品圖片 -->
+                            <div class="table-responsive">
+                                <table class="table mb-0 mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th>單一商品照片</th>
+                                            <th class="text-center">刪除商品照片</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- 渲染商品圖片 -->
+                                    <tbody class="js-item-url-modify"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h1 class="mb-3">修改單一商品資料</h1>
+                    <!-- 單一商品資料 -->
+                    <form class="js-item-form"></form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer部份 -->
+    <footer class="b-bg-falcon py-4 mt-3">
+        <p class="text-center b-text-pastel-pink">© Copright 2020 Macaron-Store</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <!-- Menu Toggle Script (#wrapper)-->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+    <script>
+        // 加入 active
+        $("#b-nav .navbar-nav a").on("click", function () {
+            $("#b-nav .navbar-nav").find("li.active").removeClass("active");
+            $(this).parent("li").addClass("active");
+        });
+    </script>
+
+    <script src="js/backendItemModify.js"></script>
+
+</body>
+
+</html>
