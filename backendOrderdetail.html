@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>單一訂單明細</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body class="b-bg-symphony">
+    <!-- 導覽列 -->
+    <div id="b-nav">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="img/text logo.png" width="120px" height="24px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="backendIndex.html">首頁</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="backendMember.html">會員資料</a>
+                    </li>
+                    <li class="nav-item mx-2 active">
+                        <a class="nav-link" href="backendOrder.html">訂單明細</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="backendList.html">產品列表</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 主要內容 -->
+    <!-- 會員資訊 -->
+    <section class="text-muted py-3">
+        <div class="container">
+            <div class="row justify-content-start js-orderdetail"></div>
+        </div>
+    </section>
+
+    <!-- 購物資訊 -->
+    <div class="container-fluid mt-4 mb-4 b-main">
+        <!-- 表格 -->
+        <div class="card b-border-falcon">
+            <div class="card-header h3">購買明細</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table mb-0 mt-3">
+                        <thead>
+                            <tr>
+                                <th>購買商品項目</th>
+                                <th>購買商品數量</th>
+                                <th>消費金額(元)</th>
+                                <th>消費金額(含稅 5%)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="js-orderdetail-tbody"></tbody>
+                        <tfoot class="js-orderdetail-tfoot"></tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-right mt-3 mb-3">
+            <button type="button" class="btn btn-outline-warning js-btn-output"><i class="fas fa-file-download"> 下載 PDF</i></button>
+            <button type="button" class="btn btn-outline-danger js-btn-print"><i class="fas fa-print"> 列印</i></button>
+        </div>
+
+    </div>
+
+    <!-- footer部份 -->
+    <footer class="b-bg-falcon py-4 mt-3">
+        <p class="text-center b-text-pastel-pink">© Copright 2020 Macaron-Store</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <!-- Menu Toggle Script (#wrapper)-->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+    <script>
+        // 加入 active
+        $("#b-nav .navbar-nav a").on("click", function () {
+            $("#b-nav .navbar-nav").find("li.active").removeClass("active");
+            $(this).parent("li").addClass("active");
+        });
+    </script>
+
+    <!-- 載入html2canvas和jspdf(command+shift+p) - 輸出PDF  -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
+
+    <script src="js/backendOrderdeatil.js"></script>
+
+</body>
+
+</html>
