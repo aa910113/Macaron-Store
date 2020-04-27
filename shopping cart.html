@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sweet you</title>
+  <link rel="stylesheet" href="css/all.css">
+</head>
+<body  class="hisb">
+  <div class="f-bg-left-shopping"></div>
+  <div class="f-bg-right-shopping"></div>
+  <div class="f-bg-circle-shopping"></div>
+  <div class="header">
+    <div class="container-fluid">
+      <div
+        class="collapse"
+        id="navbarToggleExternalContent"
+      ></div>
+      <nav class="navbar navbar-dark  justify-content-end px-4 mx-4">
+        <a
+          class="col-1"
+          href="index.html"
+        >
+          <img
+            class="logo"
+            src="img/small slogo.png"
+            alt="..."
+          ></a>
+        <div class="col-8 d-flex justify-content-center pr-5 mr-3 ml-auto">
+          <button
+            class="navbar-toggler rounded-circle f-menu-btn"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-stream"></i>
+          </button>
+        </div>
+        <div class="row d-flex align-items-center justify-content-around col-2 f-member_btn">
+          <a href="shopping cart.html"><i
+              class="fa fa-shopping-cart"
+              aria-hidden="true"
+            ></i></a>
+          <button
+            type="button"
+            class="btn btn-link "
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+          ><i class="fas fa-user-circle"></i></button>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <table class="table order">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">商品</th>
+          <th scope="col">單價</th>
+          <th scope="col">數量</th>
+          <th scope="col">總價</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="order_btn d-flex">
+      <button type="button" class="btn btn-primary f-order-btn" data-toggle="button" aria-pressed="false" autocomplete="off">
+        下單
+      </button>
+    </div>
+  </div>
+  <div class="pt-2 hisf footer">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <img
+          src="/img/text logo.png"
+          alt=""
+          class="botton_logo"
+        >
+        <p class="m-0">
+          僅用來做為作品使用。
+        </p>
+        <div class="d-flex justify-content-around f-footer-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="http://instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="exampleModalCenter"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered"
+      role="document"
+    >
+      <div class="modal-content login-bg">
+        <div class="bg-circle"></div>
+        <div class="modal-header border-0 show">
+          <div
+            class="modal-title"
+            id="exampleModalCenterTitle"
+          >
+            <img
+              class="w-25"
+              src="/img/logo.png"
+              alt=""
+            >
+          </div>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body px-5 mx-5">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control f-log-input"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control f-log-input"
+              id="exampleInputPassword1"
+              placeholder="Password"
+            >
+          </div>
+        </div>
+        <div class="modal-footer border-0 p-0 show">
+          <button
+            type="button"
+            class="btn log-btn"
+          >登入</button>
+          <button
+            type="button"
+            class="btn regd-btn"
+            data-dismiss="modal"
+            data-toggle="modal"
+            data-target="#registerModal"
+          >註冊</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="registerModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-xl"
+      role="document"
+    >
+      <div class="modal-content regd-bg">
+        <div class="modal-header border-0">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <img
+          class="w-25 m-auto"
+          src="/img/text logo.png"
+          alt=""
+        >
+        <div class="modal-body d-flex">
+          <div class="registered col-md-6">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail2">Email address</label>
+                <input
+                  type="email"
+                  class="form-control f-log-input"
+                  id="exampleInputEmail2"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword3">Password</label>
+                <input
+                  type="password"
+                  class="form-control f-log-input"
+                  id="exampleInputPassword3"
+                  placeholder="Password"
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword4">Password again</label>
+                <input
+                  type="password"
+                  class="form-control f-log-input"
+                  id="exampleInputPassword4"
+                  placeholder="Password again"
+                >
+              </div>
+            </form>
+          </div>
+          <div class="registered_personal col-md-6">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputNumber">Name</label>
+                <div class="form-row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control firstName f-log-input"
+                      placeholder="First name"
+                    >
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control lastName f-log-input"
+                      placeholder="Last name"
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputNumber">Phone number</label>
+                <input
+                  type="text"
+                  class="form-control f-log-input"
+                  id="exampleInputNumber"
+                  placeholder="Number"
+                >
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input
+                  type="text"
+                  class="form-control f-log-input"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer mt-3">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg btn-block registered_btn"
+          ><i class="fas fa-check"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="/js/shoppingCar.js"></script>
+</html>

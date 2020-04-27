@@ -1,0 +1,23 @@
+.personal_information{
+    margin-top: 150px;
+    .personal_photo{
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        width: 300px;
+    }
+}
+.f-personal-bg{
+    background-color: #B7DDE0;
+}
+.upd_btn{
+    border-color: #735b69 !important;
+    color: #735b69 !important;
+    background-color: rgba(255, 208, 214, 0.397) !important;
+}
+.upd_btn:hover{
+    color: #ffffff !important;
+    background-color: #FFD0D6 !important;
+    transition: .5s;
+}
