@@ -1,0 +1,38 @@
+.black_dot{
+    list-style-type:none;
+}
+.hisb{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 180px;
+    overflow: hidden;
+}
+.hisf{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+}
+.f-history-record{
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.315);
+    border-radius: 15px;
+    color: #735b69;
+}
+.f-history-record:hover{
+    background-color: rgba(255, 255, 255, 0.664);
+    transition: 1s;
+}
+.order{
+    color: #735b69 !important;
+}
+.record-content{
+    border: 0 !important;
+    background-color: rgba(255, 255, 255, 0.315) !important;
+    border-radius: 15px !important;
+    color: #735b69;
+}
+.hiscon{
+    min-height: 767px;
+}

@@ -1,0 +1,95 @@
+$falcon: #735b69ad;
+
+body{
+    position: relative;
+}
+.f-bg-left,
+.f-bg-right{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    z-index: -2;
+}
+.f-bg-left{
+    background-color: #FEE19F;
+}
+.f-bg-right{
+    right: 0px;
+    background-color: #B7DDE0;
+}
+.header{
+    background-color: transparent;
+}
+.f-collapse-link{
+    color: #735b69 !important;
+    background-color: rgba(255, 208, 214, 0.397) !important;
+    border: 0 !important;
+}
+.f-collapse-link:hover{
+    color: #ffffff !important;
+    background-color: #FFD0D6 !important;
+    transition: .5s;
+}
+.logo{
+    width: 50%;
+}
+.f-menu-btn{
+    width: 55px;
+    height: 55px;
+    border-color: rgb(255, 168, 180) !important;
+    color: rgb(255, 168, 180) !important;
+}
+.f-member_btn{
+  font-size: 1.5rem;
+  a{
+      color: rgb(255, 168, 180) !important;
+  }
+  button{
+      color: rgb(255, 168, 180) !important;
+      font-size: 1.5rem !important;
+      padding: 0;
+      height: 100%;
+  }
+  a:hover,
+  button:hover{
+      color: rgb(253, 144, 158) !important;
+      transition: 1s;
+  }
+}
+.f-img-center{
+    height: 348px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.f-card-border{
+    // border: 2px solid #FFD0D6 !important;
+    border: 0 !important;
+    color: #735b69;
+    // color: rgb(253, 144, 158);
+    background-color: rgba(253, 197, 204, 0.432) !important;
+    transition: 1s;
+}
+.f-card-border:hover{
+    transform:scale(1.05);
+    transition: 1s;
+}
+.botton_logo{
+    width: 100px;
+}
+.user-acc{
+    background-color: transparent !important;
+    border: 0 !important;
+}
+.footer{
+    background-color: $falcon;
+    color: #735b69;
+    height: 50px;
+    .f-footer-icons{
+        width: 120px;
+        a{
+            color: #B7DDE0  !important;
+        }
+    }
+}
