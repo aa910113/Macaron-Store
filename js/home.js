@@ -33,6 +33,9 @@ var requestOptions = {
     </div>
     <div class="p-1">
       <a href="#exampleModalCenter" data-toggle="modal" role="button" class="btn btn-lg btn-block f-collapse-link">歷史紀錄</a>
+    </div>
+    <div class="p-1">
+      <a href="backend.html" data-toggle="modal" role="button" class="btn btn-lg btn-block f-collapse-link">後台登入</a>
     </div>`
   }else if(member !== null){
     str += `

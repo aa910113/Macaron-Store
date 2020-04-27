@@ -309,7 +309,7 @@ body {
 }
 
 .footer {
-  background-color: #735b69;
+  background-color: #735b69ad;
   color: #735b69;
   height: 50px;
 }
@@ -363,6 +363,10 @@ body {
   background-color: rgba(255, 255, 255, 0.315) !important;
   border-radius: 15px !important;
   color: #735b69;
+}
+
+.hiscon {
+  min-height: 767px;
 }
 
 .single_page_information {
